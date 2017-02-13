@@ -23,3 +23,11 @@ The roles instance has all the methods documented [here](http://alanning.github.
 ```sh
 npm run build
 ```
+
+## Testing
+
+Start your local MongoDB server. Then:
+
+```sh
+npm test
+```

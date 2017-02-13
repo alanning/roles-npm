@@ -206,7 +206,7 @@ export class Roles {
       await this.users.update({_id:{$in:users}}, update, {multi: true})
     }
     catch (ex) {
-      if (ex.name === 'MongoError' && isMongoMixError(ex.err || ex.errmsg)) {
+      if (isMongoMixError(ex.err || ex.errmsg || ex.message)) {
         throw new Error (mixingGroupAndNonGroupErrorMsg)
       }
 
@@ -249,6 +249,10 @@ export class Roles {
       query,
       groupQuery,
       found = false
+
+    if (_.isNull(roles) || _.isUndefined(roles)) {
+      return false
+    }
 
     // ensure array to simplify code
     if (!_.isArray(roles)) {
@@ -636,11 +640,11 @@ export class Roles {
         {multi: true})
     }
     catch (ex) {
-      if (ex.name === 'MongoError' && isMongoMixError(ex.err || ex.errmsg)) {
-        throw new Error (mixingGroupAndNonGroupErrorMsg)
+      if (isMongoMixError(ex.err || ex.errmsg || ex.message)) {
+        throw new Error(mixingGroupAndNonGroupErrorMsg)
+      } else {
+        throw ex
       }
-
-      throw ex
     }
   }  // end _updateUserRoles
 
