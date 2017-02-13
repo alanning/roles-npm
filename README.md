@@ -1,6 +1,8 @@
 # roles-npm
 A user authorization library, integrates with MongoDB back-end, ported from Meteor accounts.
 
+Based on the [Meteor roles package Version 1.2.15](https://github.com/alanning/meteor-roles/tree/4c64ea0b24fec774279cb472b2d4205ec8048ef8).
+
 ## Usage
 
 ```js

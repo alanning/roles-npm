@@ -1,6 +1,6 @@
 {
-  "name": "roles",
-  "version": "1.2.15",
+  "name": "@alanning/roles",
+  "version": "1.0.0",
   "scripts": {
     "build": "babel -d . src/",
     "test": "mocha --compilers js:babel-register --require babel-polyfill src/tests/*.js"
