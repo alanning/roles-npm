@@ -6,7 +6,7 @@ Based on the [Meteor roles package Version 1.2.15](https://github.com/alanning/m
 ## Usage
 
 ```js
-import Roles from 'roles'
+import Roles from '@alanning/roles'
 import { MongoClient } from 'mongodb'
 
 // MongoDB connection
@@ -28,8 +28,16 @@ npm run build
 
 ## Testing
 
-Start your local MongoDB server. Then:
+Start your local MongoDB server:
+
+```sh
+mongod
+```
+
+Then:
 
 ```sh
 npm test
 ```
+
+A `roles-npm` database will be used during testing.  Feel free to delete that database after the tests are run.
