@@ -1,7 +1,7 @@
 import { createDb } from 'mongodb-in-memory'
 import assert from 'assert'
 import { Roles } from '../index'
-import { Accounts } from 'accounts'
+import { Accounts } from '@share911/accounts'
 import _ from 'underscore'
 import { MongoClient } from 'mongodb'
 
