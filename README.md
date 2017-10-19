@@ -12,7 +12,7 @@ npm install @alanning/roles --save
 
 In your app code:
 ```js
-import Roles from '@alanning/roles'
+import {Roles} from '@alanning/roles'
 import { MongoClient } from 'mongodb'
 
 // MongoDB connection
